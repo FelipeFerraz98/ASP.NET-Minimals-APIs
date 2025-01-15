@@ -1,7 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using MinimalAPI.Dominio.Interfaces;
+using MinimalAPI.Dominio.Servico;
 using MinimalAPI.Infraestrutura.Db;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IAdministradorServico, AdministradorServico>();
 
 builder.Services.AddDbContext<DbContexto>(options => {
     options.UseMySql(
