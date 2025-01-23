@@ -5,5 +5,5 @@ namespace MinimalAPI.Dominio.Interfaces;
 
 public interface IAdministradorServico
 {
-    List<Administrador> Login(LoginDTO loginDTO);
+    Administrador? Login(LoginDTO loginDTO);
 }
